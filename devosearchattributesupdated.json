@@ -1,0 +1,226 @@
+{
+  "types": [
+    {
+      "allowMarkdown": false,
+      "description": "This attribute allows you to define your TO search date within the Devo integration.",
+      "errorMessage": "Please check Devo Search - To",
+      "indicators": [
+        "Address",
+        "CIDR",
+        "EmailAddress",
+        "File",
+        "Host",
+        "Url",
+        "User Agent"
+      ],
+      "maxLength": "100",
+      "name": "Devo Search - To",
+      "system": true,
+      "validationRule": {
+        "data": 
+          "(?=.{20}$)(?:[1-9]\\\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\\\d|2[0-3]):[0-5]\\\\d:[0-5]\\\\dZ"
+        ,
+        "description": "ISO 8610 standard combined date and time in UTC.",
+        "name": "Date Time",
+        "type": "REGEX",
+        "version": "1"
+      },
+      "version": "10"
+    },
+    {
+      "allowMarkdown": false,
+      "description": "The amount of results you want to receive.",
+      "errorMessage": "Please make sure you input a number to your search limit.",
+      "indicators": [
+        "Address",
+        "CIDR",
+        "EmailAddress",
+        "File",
+        "Host",
+        "Url",
+        "User Agent"
+      ],
+      "maxLength": "100",
+      "name": "Devo Search - Limit",
+      "system": true,
+      "validationRule": {
+        "data": "1:999999999",
+        "description": "An integer field.",
+        "name": "Number",
+        "type": "INTEGER",
+        "version": "10"
+      },
+      "version": "10"
+    },
+    {
+      "allowMarkdown": false,
+      "description": "This allows you to choose what tables you would like to search on Devo.",
+      "errorMessage": "Please check Devo Search - Email Address Table",
+      "indicators": [
+        "EmailAddress"
+      ],
+      "maxLength": "100",
+      "name": "Devo Search - Email Address Table",
+      "system": true,
+      "validationRule": {
+        "name": "Devo - Email Tables"
+      },
+      "version": "10"
+    },
+    {
+      "allowMarkdown": false,
+      "description": "This allows you to choose what tables you would like to search on devo.",
+      "errorMessage": "Please check Devo Search - Table",
+      "indicators": [
+        "Address",
+        "CIDR",
+        "EmailAddress",
+        "File",
+        "Host",
+        "Url",
+        "User Agent"
+      ],
+      "maxLength": "100",
+      "name": "Devo Search - IP Table",
+      "system": true,
+      "validationRule": {
+        "name": "Devo - IP Tables",
+        "indicators": [
+          "Address"
+        ]
+      },
+      "version": "10"
+    },
+    {
+      "allowMarkdown": false,
+      "description": "This allows you to define your From date for your Devo search.",
+      "errorMessage": "Check your Devo Search - From field.",
+      "indicators": [
+        "Address",
+        "CIDR",
+        "EmailAddress",
+        "File",
+        "Host",
+        "Url",
+        "User Agent"
+      ],
+      "maxLength": "100",
+      "name": "Devo Search - From",
+      "system": true,
+      "validationRule": {
+        "data": 
+          "(?=.{20}$)(?:[1-9]\\\\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\\\\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[1-9]\\\\d(?:0[48]|[2468][048]|[13579][26])|(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\\\\d|2[0-3]):[0-5]\\\\d:[0-5]\\\\dZ"
+        ,
+        "description": "ISO 8610 standard combined date and time in UTC.",
+        "name": "Date Time",
+        "type": "REGEX",
+        "version": "1"
+      },
+      "version": "10"
+    },
+    {
+      "allowMarkdown": false,
+      "description": "This allows you to choose what tables you would like to search on devo.",
+      "errorMessage": "Please check Devo Search - Table",
+      "indicators": [
+        "Host"
+      ],
+      "maxLength": "100",
+      "name": "Devo Search - Hosts Table",
+      "system": true,
+      "validationRule": {
+        "name": "Devo - Host Tables"
+      },
+      "version": "10"
+    },
+    {
+      "allowMarkdown": false,
+      "description": "This allows you to choose what tables you would like to search on devo.",
+      "errorMessage": "Please Check Devo Search - UserAgents Tables",
+      "indicators": [
+        "User Agent"
+      ],
+      "maxLength": "100",
+      "name": "Devo Search - UserAgents Table",
+      "system": true,
+      "validationRule": {
+        "name": "Devo - userAgents Tables"
+      },
+      "version": "10"
+    },
+    {
+      "allowMarkdown": false,
+      "description": "This allows you to choose what tables you would like to search on devo.",
+      "errorMessage": "Please check Devo Search - Table",
+      "indicators": [
+        "CIDR"
+      ],
+      "maxLength": "100",
+      "name": "Devo Search - Cidr Table",
+      "system": true,
+      "validationRule": {
+        "name": "Devo - Cidr Tables"
+      },
+      "version": "10"
+    },
+    {
+      "allowMarkdown": false,
+      "description": "This allows you to choose what tables you would like to search on devo.",
+      "errorMessage": "Please check Devo Search - Table",
+      "indicators": [
+        "Url"
+      ],
+      "maxLength": "100",
+      "name": "Devo Search - URL",
+      "system": true,
+      "validationRule": {
+        "name": "Devo - Urls Tables"
+      },
+      "version": "10"
+    }
+  ],
+  "validationRules": [
+    {
+      "data": "firewall.all.traffic;",
+      "description": "Choose the table you would like to search in Devo",
+      "name": "Devo - IP Tables",
+      "type": "SELECT_ONE_RADIO",
+      "version": "10"
+    },
+    {
+      "data": "dns.bluecat.named;",
+      "description": "Choose the table you would like to search in Devo",
+      "name": "Devo - Host Tables",
+      "type": "SELECT_ONE_RADIO",
+      "version": "10"
+    },
+    {
+      "data": "proxy.all.access;",
+      "description": "Choose the table you would like to search in Devo",
+      "name": "Devo - Urls Tables",
+      "type": "SELECT_ONE_RADIO",
+      "version": "10"
+    },
+    {
+      "data": "mail.proofpoint.tapsiem_v2;",
+      "description": "Choose the table you would like to search in Devo",
+      "name": "Devo - userAgents Tables",
+      "type": "SELECT_ONE_RADIO",
+      "version": "10"
+    },
+    {
+      "data": "mail.proofpoint.tapsiem_v2;",
+      "description": "Choose the table you would like to search in Devo",
+      "name": "Devo - Email Tables",
+      "type": "SELECT_ONE_RADIO",
+      "version": "10"
+    },
+    {
+      "data": "firewall.all.traffic;",
+      "description": "Choose the table you would like to search in Devo",
+      "name": "Devo - Cidr Tables",
+      "type": "SELECT_ONE_RADIO",
+      "version": "10"
+    }
+  ]
+}
